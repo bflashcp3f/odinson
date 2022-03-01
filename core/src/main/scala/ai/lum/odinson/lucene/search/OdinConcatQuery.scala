@@ -118,7 +118,7 @@ class OdinConcatQuery(
 
     def nextStartPosition(): Int = {
       atFirstInCurrentDoc = false
-      if (pq.size() > 0) {
+      if (pq != null && pq.size() > 0) {
         topPositionOdinsonMatch = pq.pop()
         matchStart = topPositionOdinsonMatch.start
         matchEnd = topPositionOdinsonMatch.end
